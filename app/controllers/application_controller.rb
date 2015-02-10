@@ -14,4 +14,12 @@ class ApplicationController < ActionController::Base
   def brokers
     
   end
+
+  def why_quizzify
+    
+  end
+
+  def pricing
+    
+  end
 end

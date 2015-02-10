@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'team' => 'application#team'
   get 'faqs' => 'application#faqs'
   get 'brokers' => 'application#brokers'
+  get 'why_quizzify' => 'application#why_quizzify'
+  get 'pricing' => 'application#pricing'
   resources :users, only: [:new, :create, :show, :index]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
