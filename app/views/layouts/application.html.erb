@@ -45,7 +45,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Quizzify</a>
+        <a class="navbar-brand" href="/">Quizzify</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
 
@@ -56,7 +56,7 @@
               </a>
              
               <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Management Team</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="./team">Management Team</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">In the Founders’ Own Words</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Quizzify Pricing and Guarantees</a></li>
                 <li role="presentation" class="divider"></li>
@@ -76,7 +76,7 @@
               </ul>
             </li>
 
-            <li><%= link_to "For Broker's Eyes Only", "/path3"  %></li>
+            <li><%= link_to "For Broker's Eyes Only", brokers_path  %></li>
 
             <li class="dropdown">
               <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
@@ -96,7 +96,7 @@
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Communications</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Communications", faqs_path %></a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Implementation</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">The “Big Bang” Implementation</a></li>
               </ul>
@@ -114,7 +114,7 @@
             </li>
           
           
-            <li><%= link_to "FAQs", "/path3"  %></li>
+            <li><%= link_to "FAQs", faqs_path  %></li>
           </ul>
         </div>
       </div>
@@ -130,8 +130,11 @@
       </div><!--/row-->
       
      
-        <footer class="footer navbar-fixed-bottom">
-          <p>&copy; Company 2015</p>
+
+        <footer id="footer navbar-fixed-bottom">
+          <div class="container">
+            <p class="copyright pull-left">&copy; Quizzify 2015</br>
+          </div>
         </footer>
       
 
