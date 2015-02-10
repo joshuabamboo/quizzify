@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'reporting' => 'application#reporting'
   get 'implementation' => 'application#implementation'
   get 'questions' => 'application#questions'
+  get 'speedbumps' => 'application#speedbumps'
   resources :users, only: [:new, :create, :show, :index]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

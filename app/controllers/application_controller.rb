@@ -50,4 +50,8 @@ class ApplicationController < ActionController::Base
   def questions
     
   end
+
+  def speedbumps
+    
+  end
 end

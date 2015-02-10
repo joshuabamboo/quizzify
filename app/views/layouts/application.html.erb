@@ -71,8 +71,7 @@
               </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                 <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "The Quizzify Questions", questions_path %></a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Download the Sample</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Speedbumps</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Speedbumps", speedbumps_path %></a></li>
               </ul>
             </li>
 
@@ -90,18 +89,8 @@
               </ul>
             </li>
 
-            <li class="dropdown">
-              <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-                Implementation
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Communications", faqs_path %></a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Implementation", implementation_path %></a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">The “Big Bang” Implementation</a></li>
-              </ul>
-            </li>
-
+          
+            <li><%= link_to "Implementation", implementation_path %></a></li>
             <li><%= link_to "Reporting", reporting_path %></li>          
             <li><%= link_to "FAQs", faqs_path  %></li>
           </ul>
