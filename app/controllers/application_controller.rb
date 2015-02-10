@@ -22,4 +22,28 @@ class ApplicationController < ActionController::Base
   def pricing
     
   end
+
+  def difference
+    
+  end
+
+  def ohtheplacesyoullgo
+    
+  end
+
+  def integrating
+    
+  end
+
+  def customization
+    
+  end
+
+  def reporting
+    
+  end
+
+  def implementation
+    
+  end
 end

@@ -60,7 +60,7 @@
                 <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "In the Founders’ Own Words", why_quizzify_path %></a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" ><%= link_to "Pricing and Guarantees", pricing_path %></a></li>
                 <li role="presentation" class="divider"></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Quizzify vs. Wellness</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Quizzify vs. Wellness", difference_path %></a></li>
               </ul>
             </li>
 
@@ -70,7 +70,7 @@
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">The Quizzify Questions</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "The Quizzify Questions" %></a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Download the Sample</a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Speedbumps</a></li>
               </ul>
@@ -84,9 +84,9 @@
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Oh, the Places You’ll Go</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Integrating Other HR Programs</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Customization</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" ><%= link_to "Oh, the Places You'll Go", ohtheplacesyoullgo_path %></a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Inegrating Other HR Programs", integrating_path %></a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Customization", customization_path %></a></li>
               </ul>
             </li>
 
@@ -97,23 +97,12 @@
               </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                 <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Communications", faqs_path %></a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Implementation</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Implementation", implementation_path %></a></li>
                 <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">The “Big Bang” Implementation</a></li>
               </ul>
             </li>
 
-            <li class="dropdown">
-              <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-                Reporting
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">General</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Reporting on…Engagement (Seriously?)</a></li>
-              </ul>
-            </li>
-          
-          
+            <li><%= link_to "Reporting", reporting_path %></li>          
             <li><%= link_to "FAQs", faqs_path  %></li>
           </ul>
         </div>
