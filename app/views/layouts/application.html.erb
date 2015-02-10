@@ -1,14 +1,141 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>MarketingSite</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "MarketingSite" %></title>
+    <%= csrf_meta_tags %>
 
-<%= yield %>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
+    <![endif]-->
 
-</body>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+
+    <!-- For third-generation iPad with high-resolution Retina display: -->
+    <!-- Size should be 144 x 144 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
+
+    <!-- For iPhone with high-resolution Retina display: -->
+    <!-- Size should be 114 x 114 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
+
+    <!-- For first- and second-generation iPad: -->
+    <!-- Size should be 72 x 72 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72' %>
+
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <!-- Size should be 57 x 57 pixels -->
+    <%= favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png' %>
+
+    <!-- For all other devices -->
+    <!-- Size should be 32 x 32 pixels -->
+    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+
+    <%= javascript_include_tag "application" %>
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Quizzify</a>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                Why Quizzify?
+                <span class="caret"></span>
+              </a>
+             
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Management Team</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">In the Founders’ Own Words</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Quizzify Pricing and Guarantees</a></li>
+                <li role="presentation" class="divider"></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Quizzify vs. Wellness</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                Here's the Beef
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">The Quizzify Questions</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Download the Sample</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Speedbumps</a></li>
+              </ul>
+            </li>
+
+            <li><%= link_to "For Broker's Eyes Only", "/path3"  %></li>
+
+            <li class="dropdown">
+              <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                Oh, the Places You'll Go
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Oh, the Places You’ll Go</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Integrating Other HR Programs</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Customization</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                Implementation
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Communications</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Implementation</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">The “Big Bang” Implementation</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                Reporting
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">General</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/fat">Reporting on…Engagement (Seriously?)</a></li>
+              </ul>
+            </li>
+          
+          
+            <li><%= link_to "FAQs", "/path3"  %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <%= bootstrap_flash %>
+          <%= yield %>
+        </div>
+  
+      </div><!--/row-->
+      
+     
+        <footer class="footer navbar-fixed-bottom">
+          <p>&copy; Company 2015</p>
+        </footer>
+      
+
+    </div> <!-- /container -->
+
+  </body>
 </html>
