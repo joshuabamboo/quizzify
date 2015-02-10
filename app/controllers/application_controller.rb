@@ -46,4 +46,8 @@ class ApplicationController < ActionController::Base
   def implementation
     
   end
+
+  def questions
+    
+  end
 end
