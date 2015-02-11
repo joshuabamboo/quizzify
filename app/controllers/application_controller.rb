@@ -28,4 +28,6 @@ class ApplicationController < ActionController::Base
   def questions; end
 
   def speedbumps; end
+
+  def terms; end
 end
