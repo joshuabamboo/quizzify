@@ -9,7 +9,6 @@ class UsersController < ApplicationController
     @user.email = params["email"]
     @user.name = params["name"]
     @user.save
-    binding.pry
     redirect_to root_path
   end
 end
