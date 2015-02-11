@@ -41,4 +41,5 @@ gem 'spring',        group: :development
 gem 'twitter-bootstrap-rails' 
 gem "therubyracer"
 gem "less-rails"
+gem "pry"
 
