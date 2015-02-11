@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "MarketingSite" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Quizzify" %></title>
     <%= csrf_meta_tags %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -37,86 +37,82 @@
     <%= javascript_include_tag "application" %>
   </head>
   <body>
+    <div id="wrapper">
 
-    <div class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">Quizzify</a>
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
+      <div class="navbar navbar-default navbar-static-top">
+        <div class="container">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Quizzify</a>
+          <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
 
-            <li class="dropdown">
-              <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-                Why Quizzify?
-                <span class="caret"></span>
-              </a>
-             
-              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                <li role="presentation"><a role="menuitem" tabindex="-1" href="./team">Management Team</a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "In the Founders’ Own Words", why_quizzify_path %></a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1" ><%= link_to "Pricing and Guarantees", pricing_path %></a></li>
-                <li role="presentation" class="divider"></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Quizzify vs. Wellness", difference_path %></a></li>
-              </ul>
-            </li>
+              <li class="dropdown">
+                <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                  Why Quizzify?
+                  <span class="caret"></span>
+                </a>
+               
+                <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "In the Founders’ Own Words", why_quizzify_path %></a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" ><%= link_to "Pricing and Guarantees", pricing_path %></a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Quizzify vs. Wellness", difference_path %></a></li>
+                </ul>
+              </li>
 
-            <li class="dropdown">
-              <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-                Here's the Beef
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "The Quizzify Questions", questions_path %></a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Speedbumps", speedbumps_path %></a></li>
-              </ul>
-            </li>
+              <li class="dropdown">
+                <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                  Here's the Beef
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "The Quizzify Questions", questions_path %></a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Speedbumps", speedbumps_path %></a></li>
+                </ul>
+              </li>
 
-            <li><%= link_to "For Broker's Eyes Only", brokers_path  %></li>
+              <li class="dropdown">
+                <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                  Oh, the Places You'll Go
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" ><%= link_to "Oh, the Places You'll Go", ohtheplacesyoullgo_path %></a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Inegrating Other HR Programs", integrating_path %></a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Customization", customization_path %></a></li>
+                </ul>
+              </li>
 
-            <li class="dropdown">
-              <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
-                Oh, the Places You'll Go
-                <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                <li role="presentation"><a role="menuitem" tabindex="-1" ><%= link_to "Oh, the Places You'll Go", ohtheplacesyoullgo_path %></a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Inegrating Other HR Programs", integrating_path %></a></li>
-                <li role="presentation"><a role="menuitem" tabindex="-1"><%= link_to "Customization", customization_path %></a></li>
-              </ul>
-            </li>
-
-          
-            <li><%= link_to "Implementation", implementation_path %></a></li>
-            <li><%= link_to "Reporting", reporting_path %></li>          
-            <li><%= link_to "FAQs", faqs_path  %></li>
-          </ul>
+              <li><%= link_to "Implementation", implementation_path %></li>
+              <li><%= link_to "Reporting", reporting_path %></li>          
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <%= bootstrap_flash %>
-          <%= yield %>
-        </div>
-  
-      </div><!--/row-->
-      
-     
-
-        <footer id="footer navbar-fixed-bottom">
-          <div class="container">
-            <p class="copyright pull-left">&copy; Quizzify 2015</br>
+      <div class="container content">
+        <div class="row">
+          <div class="col-lg-12">
+            <%= bootstrap_flash %>
+            <%= yield %>
           </div>
-        </footer>
-      
+        </div><!--/row--> 
+      </div> <!-- /container -->
 
-    </div> <!-- /container -->
+      <footer class="footer navbar-fixed-bottom">
+        <div class="container">
+          <ul class="list-inline text-muted">
+            <li class="footer-links" id="dLabel">&copy; 2015 Quizzify. All Rights Reserved.</li>
+            <li class="footer-links" id="dLabel"><%= link_to "Management Team", team_path %></li>
+            <li class="footer-links"><%= link_to "FAQs", faqs_path  %></li>
+            <li class="footer-links"><%= link_to "For Broker's Eyes Only", brokers_path  %></li>
+          </ul>
+        </div>
 
+      </footer>
+    </div>
   </body>
 </html>
